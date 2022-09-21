@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
-    path: Assets/Scenes/BarcodeScanner.unity
+    path: Assets/Scenes/0BarcodeScanner.unity
     guid: 4f588c7eded50714ebc2f9fec08acbd8
+  - enabled: 1
+    path: Assets/Scenes/1ItemShowcase.unity
+    guid: 0de23ee25b5d00c4b86acf7b729a2050
+  - enabled: 1
+    path: Assets/Scenes/2Leaderboard.unity
+    guid: edc4487fc35112c4d9617596cde3efb8
+  - enabled: 1
+    path: Assets/Scenes/3Search.unity
+    guid: ce21a0ae09d051f43a77df2f5d33e9ab
+  - enabled: 1
+    path: Assets/Scenes/4Cart.unity
+    guid: 3fd4a4f7636447e46b111e5627b4e2ec
+  - enabled: 1
+    path: Assets/Scenes/5Profile.unity
+    guid: 55c7ccd2d3ab7d04f9e0f53aa152becc
   m_configObjects: {}
