@@ -2,8 +2,6 @@ using System.Collections;
 using UnityEngine;
 
 public class MockScan : MonoBehaviour{
-	[SerializeField] private int scanCode;
-	
 	public void Scan(){
 		SceneChangeMessage sceneChangeMessage = new(){NewSceneNumber = 1};
 		Broker.InvokeSubscribers(typeof(SceneChangeMessage), sceneChangeMessage);
@@ -11,7 +9,7 @@ public class MockScan : MonoBehaviour{
 	}
 	private IEnumerator DelayLoad(){
 		yield return new WaitForSeconds(0.1f);
-		ProductScannedMessage productScannedMessage = new(){ScannedData = scanCode};
+		ProductScannedMessage productScannedMessage = new(){ScannedData = Random.Range(0, 7)};
 		Broker.InvokeSubscribers(typeof(ProductScannedMessage), productScannedMessage);
 	}
 }

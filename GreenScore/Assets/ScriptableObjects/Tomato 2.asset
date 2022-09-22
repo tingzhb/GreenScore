@@ -16,7 +16,7 @@ MonoBehaviour:
   address: Odengatan 40, 113 51 Stockholm
   placeName: ICA Baronen
   itemType: 0
-  id: 2
+  id: 5
   spriteIndex: 0
   greenScore: 2.5
   price: 25.75

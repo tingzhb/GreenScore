@@ -16,7 +16,7 @@ MonoBehaviour:
   address: Birger Jarlsgatan 61, 114 29 Stockholm
   placeName: "Hemk\xF6p Birger Jarlsgatan"
   itemType: 0
-  id: 3
+  id: 6
   spriteIndex: 0
   greenScore: 0.5
   price: 12.5
