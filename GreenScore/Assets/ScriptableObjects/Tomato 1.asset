@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83561703f1c785468b2ea058c2acd57, type: 3}
   m_Name: Tomato 1
   m_EditorClassIdentifier: 
-  itemName: Local Tomato
+  itemName: Tomato Sweden Class 1
+  address: Odengatan 31, 113 51 Stockholm
+  placeName: Coop Odengatan
   itemType: 0
   id: 1
   spriteIndex: 0
   greenScore: 4.5
   price: 25
+  wPrice: 100

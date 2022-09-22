@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d83561703f1c785468b2ea058c2acd57, type: 3}
-  m_Name: Tomato 2
+  m_Name: Tomato 3
   m_EditorClassIdentifier: 
-  itemName: Tomato On Branch Import Class 1
-  address: Odengatan 40, 113 51 Stockholm
-  placeName: ICA Baronen
+  itemName: Tomato Sweden Class 2
+  address: Birger Jarlsgatan 61, 114 29 Stockholm
+  placeName: "Hemk\xF6p Birger Jarlsgatan"
   itemType: 0
-  id: 2
+  id: 3
   spriteIndex: 0
-  greenScore: 2.5
-  price: 25.75
-  wPrice: 103
+  greenScore: 0.5
+  price: 12.5
+  wPrice: 50
