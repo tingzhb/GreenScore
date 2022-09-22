@@ -31,5 +31,6 @@ public class ShowItemDetails : MonoBehaviour{
 		for (var i = 0; i < Mathf.Ceil(greenScore); i++){
 			stars[i].SetActive(true);
 		}
+		Broker.Unsubscribe<ShowProductDetailsMessage>(OnShowProductDetailsMessageReceived);
 	}
 }

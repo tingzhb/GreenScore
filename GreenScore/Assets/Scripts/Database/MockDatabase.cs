@@ -37,8 +37,7 @@ public class MockDatabase : MonoBehaviour{
 			}
 		}
 	}
-	private static void SendProductDetails(ItemDetails item, int displayIndex){
-
+	private void SendProductDetails(ItemDetails item, int displayIndex){
 		ShowProductDetailsMessage showProductDetailsMessage = new(){
 			displayIndex = displayIndex,
 			ItemName = item.itemName,
