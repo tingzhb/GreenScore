@@ -23,7 +23,7 @@ public class MockDatabase : MonoBehaviour{
 	
 	private void OnProductScannedMessageReceived(ProductScannedMessage obj){
 		foundItem = FindItemByID(obj.ScannedData);
-		SendProductDetails(foundItem, true); 
+		SendProductDetails(foundItem, 0); 
 		FindBestItem();
 	}
 	
@@ -33,14 +33,14 @@ public class MockDatabase : MonoBehaviour{
 				foundItem = item;
 				FindBestItem();
 			} else {
-				SendProductDetails(foundItem, false);
+				SendProductDetails(foundItem, 1);
 			}
 		}
 	}
-	private static void SendProductDetails(ItemDetails item, bool scannedItem){
+	private static void SendProductDetails(ItemDetails item, int displayIndex){
 
 		ShowProductDetailsMessage showProductDetailsMessage = new(){
-			ScannedItem = scannedItem,
+			displayIndex = displayIndex,
 			ItemName = item.itemName,
 			ItemType = item.itemType,
 			Id = item.id,

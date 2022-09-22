@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cart : MonoBehaviour{
 	[SerializeField] private MockDatabase database;
-	private List<ItemDetails> cartList;
+	public List<ItemDetails> cartList;
 	private void Awake(){
 		cartList = new List<ItemDetails>();
 		Broker.Subscribe<ItemAddMessage>(OnItemAddMessageReceived);

@@ -1,6 +1,6 @@
 public class ShowProductDetailsMessage : IMessage {
 	
-	public bool ScannedItem { get; set; }
+	public int displayIndex { get; set; }
 	public string ItemName { get; set; }
 	public string Address { get; set; }
 	public string PlaceName { get; set; }

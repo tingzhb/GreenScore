@@ -502,6 +502,7 @@ MonoBehaviour:
   - {fileID: 858445753}
   - {fileID: 858445752}
   - {fileID: 858445751}
+  objectDisplayIndex: 0
 --- !u!114 &554283121 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 489787195088820577, guid: 89efb45eb7c56e6468d56d8b7709c1a4, type: 3}
@@ -703,6 +704,10 @@ PrefabInstance:
     - target: {fileID: 2265190049041500518, guid: 89efb45eb7c56e6468d56d8b7709c1a4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510146397697457326, guid: 89efb45eb7c56e6468d56d8b7709c1a4, type: 3}
+      propertyPath: objectDisplayIndex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89efb45eb7c56e6468d56d8b7709c1a4, type: 3}
