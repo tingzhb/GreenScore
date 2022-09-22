@@ -3,22 +3,30 @@ using UnityEngine;
 public class MockDatabase : MonoBehaviour{
 	[SerializeField] private ItemDetails[] items;
 	private ItemDetails foundItem;
+	private ItemDetails pickedÍtem;
 	private void Awake(){
 		Broker.Subscribe<ProductScannedMessage>(OnProductScannedMessageReceived);
 	}
 	private void OnDisable(){
 		Broker.Unsubscribe<ProductScannedMessage>(OnProductScannedMessageReceived);
 	}
-	private void OnProductScannedMessageReceived(ProductScannedMessage obj){
+
+	public ItemDetails FindItemByID(int id){
 		foreach (var item in items){
-			if (item.id != obj.ScannedData)
-				continue;
-			foundItem = item;
-			SendProductDetails(item, true);
-			break;
+			if (item.id == id){
+				pickedÍtem = item;
+				break;
+			}
 		}
+		return pickedÍtem;
+	}
+	
+	private void OnProductScannedMessageReceived(ProductScannedMessage obj){
+		foundItem = FindItemByID(obj.ScannedData);
+		SendProductDetails(foundItem, true); 
 		FindBestItem();
 	}
+	
 	private void FindBestItem(){
 		foreach (var item in items){
 			if (foundItem.itemType == item.itemType && foundItem.greenScore < item.greenScore){

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 28452706}
   - component: {fileID: 28452705}
   - component: {fileID: 28452707}
+  - component: {fileID: 28452708}
   m_Layer: 0
   m_Name: PersistentPlayer
   m_TagString: Untagged
@@ -185,6 +186,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4c688e931421e94f8365cb4cb84511f, type: 2}
   - {fileID: 11400000, guid: de3a579e908e118408471dd179325fab, type: 2}
   - {fileID: 11400000, guid: e2fff197d4776f142842f7cbf0203e8a, type: 2}
+--- !u!114 &28452708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28452704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87febc983e76371468ff44a5e411e528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 28452707}
 --- !u!1 &75494440
 GameObject:
   m_ObjectHideFlags: 0
