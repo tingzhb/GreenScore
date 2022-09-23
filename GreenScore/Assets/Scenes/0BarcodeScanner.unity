@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 28452705}
   - component: {fileID: 28452707}
   - component: {fileID: 28452708}
+  - component: {fileID: 28452709}
   m_Layer: 0
   m_Name: PersistentPlayer
   m_TagString: Untagged
@@ -203,7 +204,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 28452707}
-  cartList: []
+--- !u!114 &28452709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28452704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ca79f8899d1ce4a9e931505387990b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75494440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,7 +2302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7500271167146151548, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7500271167146151548, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
       propertyPath: m_AnchorMax.x

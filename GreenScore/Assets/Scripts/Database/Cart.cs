@@ -10,12 +10,30 @@ public class Cart : MonoBehaviour{
 		cartList = new List<ItemDetails>();
 		Broker.Subscribe<ItemAddMessage>(OnItemAddMessageReceived);
 		Broker.Subscribe<SceneChangeMessage>(OnSceneChangedMessageReceived);
+		Broker.Subscribe<CheckoutMessage>(OnCheckoutMessageReceived);
 	}
+
 
 	private void OnDisable(){
 		Broker.Unsubscribe<ItemAddMessage>(OnItemAddMessageReceived);
 		Broker.Unsubscribe<SceneChangeMessage>(OnSceneChangedMessageReceived);
+		Broker.Unsubscribe<CheckoutMessage>(OnCheckoutMessageReceived);
 	}
+	
+	private void OnCheckoutMessageReceived(CheckoutMessage obj){
+		var additionalGreenScore = 0f;
+		foreach (var item in cartList){
+			additionalGreenScore += item.greenScore;
+		}
+
+		ProfileUpdateMessage profileUpdateMessage = new(){
+			AddGreenScore = additionalGreenScore,
+			AddProducts = cartList.Count
+		};
+		Broker.InvokeSubscribers(typeof(ProfileUpdateMessage), profileUpdateMessage);
+		cartList.Clear();
+	}
+	
 	private void OnSceneChangedMessageReceived(SceneChangeMessage obj){
 		if (obj.NewSceneNumber == 4){
 			StartCoroutine(DelayCartMessage());
