@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83561703f1c785468b2ea058c2acd57, type: 3}
   m_Name: Strawberry 2
   m_EditorClassIdentifier: 
-  itemName: Tomato Japan Class A
+  itemName: Strawberry Japan Class A
   address: Odengatan 33, 113 51 Stockholm
   placeName: Ostbutiken Odengatan
   itemType: 2

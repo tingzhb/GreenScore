@@ -22,8 +22,8 @@ public class ShowItemDetails : MonoBehaviour{
 
 		texts[0].text = obj.ItemName;
 		texts[1].text = obj.ItemType.ToString();
-		texts[2].text = "GreenScore: " + greenScore.ToString(CultureInfo.InvariantCulture);
-		texts[3].text = "Price: " + obj.Price.ToString(CultureInfo.InvariantCulture) + "kr";
+		texts[2].text = greenScore.ToString(CultureInfo.InvariantCulture);
+		texts[3].text = obj.Price.ToString(CultureInfo.InvariantCulture) + "kr";
 		texts[4].text = "(" + obj.WPrice.ToString(CultureInfo.InvariantCulture) + "/kg)";
 		texts[5].text = obj.PlaceName.ToString(CultureInfo.InvariantCulture);
 		texts[6].text = obj.Address.ToString(CultureInfo.InvariantCulture);

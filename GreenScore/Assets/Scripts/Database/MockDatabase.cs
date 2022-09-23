@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MockDatabase : MonoBehaviour{
@@ -28,14 +29,12 @@ public class MockDatabase : MonoBehaviour{
 	}
 	
 	private void FindBestItem(){
-		foreach (var item in items){
-			if (foundItem.itemType == item.itemType && foundItem.greenScore < item.greenScore){
-				foundItem = item;
-				FindBestItem();
-			} else {
-				SendProductDetails(foundItem, 1);
+		foreach (var newItem in items){
+			if (foundItem.itemType == newItem.itemType && newItem.greenScore > foundItem.greenScore){
+				foundItem = newItem;
 			}
 		}
+		SendProductDetails(foundItem, 1);
 	}
 	private void SendProductDetails(ItemDetails item, int displayIndex){
 		ShowProductDetailsMessage showProductDetailsMessage = new(){
