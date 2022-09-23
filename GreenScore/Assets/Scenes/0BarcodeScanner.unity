@@ -2288,6 +2288,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7500271165726375623, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500271165726375623, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
+      propertyPath: m_Color.g
+      value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500271165726375623, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
+      propertyPath: m_Color.r
+      value: 0.45098042
+      objectReference: {fileID: 0}
     - target: {fileID: 7500271167146151523, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
       propertyPath: m_Name
       value: MainMenu

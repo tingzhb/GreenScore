@@ -896,6 +896,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21521135, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
+      propertyPath: m_Color.b
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 21521135, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
+      propertyPath: m_Color.g
+      value: 0.75294125
+      objectReference: {fileID: 0}
+    - target: {fileID: 21521135, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
+      propertyPath: m_Color.r
+      value: 0.45098042
+      objectReference: {fileID: 0}
     - target: {fileID: 706638703, guid: c83bd120d38968e469d4e3edc2c894ea, type: 3}
       propertyPath: currentSceneNumber
       value: 3

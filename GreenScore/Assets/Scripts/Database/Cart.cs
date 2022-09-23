@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Cart : MonoBehaviour{
@@ -12,8 +13,7 @@ public class Cart : MonoBehaviour{
 		Broker.Subscribe<SceneChangeMessage>(OnSceneChangedMessageReceived);
 		Broker.Subscribe<CheckoutMessage>(OnCheckoutMessageReceived);
 	}
-
-
+	
 	private void OnDisable(){
 		Broker.Unsubscribe<ItemAddMessage>(OnItemAddMessageReceived);
 		Broker.Unsubscribe<SceneChangeMessage>(OnSceneChangedMessageReceived);
@@ -21,10 +21,7 @@ public class Cart : MonoBehaviour{
 	}
 	
 	private void OnCheckoutMessageReceived(CheckoutMessage obj){
-		var additionalGreenScore = 0f;
-		foreach (var item in cartList){
-			additionalGreenScore += item.greenScore;
-		}
+		var additionalGreenScore = cartList.Sum(item => item.greenScore);
 
 		ProfileUpdateMessage profileUpdateMessage = new(){
 			AddGreenScore = additionalGreenScore,
