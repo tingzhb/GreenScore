@@ -17,7 +17,7 @@ public class Profile : MonoBehaviour{
 	private void OnSceneChangedMessageReceived(SceneChangeMessage obj){
 		if (obj.NewSceneNumber == 5){
 			StartCoroutine(DelayShowProfileMessage());
-		}	
+		}
 	}
 
 	private IEnumerator DelayShowProfileMessage(){
