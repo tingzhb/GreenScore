@@ -10,7 +10,7 @@ public class AddItem : MonoBehaviour{
 		Broker.Unsubscribe<ShowProductDetailsMessage>(OnShowProductDetailsMessageReceived);
 	}
 	private void OnShowProductDetailsMessageReceived(ShowProductDetailsMessage obj){
-		if (obj.displayIndex == 0){
+		if (obj.DisplayIndex == 0){
 			itemID = obj.Id;
 		}
 	}

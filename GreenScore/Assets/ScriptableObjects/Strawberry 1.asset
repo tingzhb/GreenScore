@@ -17,7 +17,7 @@ MonoBehaviour:
   placeName: Coop Odengatan
   itemType: 2
   id: 0
-  spriteIndex: 0
+  spriteIndex: 2
   greenScore: 3.5
   price: 50
   wPrice: 200

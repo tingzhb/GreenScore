@@ -17,7 +17,7 @@ MonoBehaviour:
   placeName: ICA Baronen
   itemType: 2
   id: 2
-  spriteIndex: 0
+  spriteIndex: 2
   greenScore: 2.7
   price: 31
   wPrice: 206

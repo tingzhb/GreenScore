@@ -17,7 +17,7 @@ MonoBehaviour:
   placeName: Ostbutiken Odengatan
   itemType: 2
   id: 1
-  spriteIndex: 0
+  spriteIndex: 3
   greenScore: 0.1
   price: 200
   wPrice: 800

@@ -17,7 +17,7 @@ MonoBehaviour:
   placeName: "Hemk\xF6p Birger Jarlsgatan"
   itemType: 2
   id: 3
-  spriteIndex: 0
+  spriteIndex: 3
   greenScore: 4
   price: 25
   wPrice: 100

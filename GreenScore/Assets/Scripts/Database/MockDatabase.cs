@@ -4,7 +4,7 @@ using UnityEngine;
 public class MockDatabase : MonoBehaviour{
 	[SerializeField] private ItemDetails[] items;
 	private ItemDetails foundItem;
-	private ItemDetails pickedÍtem;
+	private ItemDetails pickedItem;
 	private void Awake(){
 		Broker.Subscribe<ProductScannedMessage>(OnProductScannedMessageReceived);
 	}
@@ -15,11 +15,11 @@ public class MockDatabase : MonoBehaviour{
 	public ItemDetails FindItemByID(int id){
 		foreach (var item in items){
 			if (item.id == id){
-				pickedÍtem = item;
+				pickedItem = item;
 				break;
 			}
 		}
-		return pickedÍtem;
+		return pickedItem;
 	}
 	
 	private void OnProductScannedMessageReceived(ProductScannedMessage obj){
@@ -38,7 +38,7 @@ public class MockDatabase : MonoBehaviour{
 	}
 	private void SendProductDetails(ItemDetails item, int displayIndex){
 		ShowProductDetailsMessage showProductDetailsMessage = new(){
-			displayIndex = displayIndex,
+			DisplayIndex = displayIndex,
 			ItemName = item.itemName,
 			ItemType = item.itemType,
 			Id = item.id,
@@ -50,5 +50,6 @@ public class MockDatabase : MonoBehaviour{
 			PlaceName = item.placeName
 		};
 		Broker.InvokeSubscribers(typeof(ShowProductDetailsMessage), showProductDetailsMessage);
+		Debug.Log("ProductDetailsSent");
 	}
 }
