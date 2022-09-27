@@ -8,7 +8,7 @@ public class MockScan : MonoBehaviour{
 		StartCoroutine(DelayLoad());
 	}
 	private IEnumerator DelayLoad(){
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.2f);
 		ProductScannedMessage productScannedMessage = new(){ScannedData = Random.Range(0, 7)};
 		Broker.InvokeSubscribers(typeof(ProductScannedMessage), productScannedMessage);
 	}

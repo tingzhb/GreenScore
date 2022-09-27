@@ -37,7 +37,7 @@ public class Cart : MonoBehaviour{
 		}
 	}
 	private IEnumerator DelayCartMessage(){
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.2f);
 		CartMessage cartMessage = new(){ItemDetailsList = cartList};
 		Broker.InvokeSubscribers(typeof(CartMessage), cartMessage);
 	}

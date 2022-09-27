@@ -14,7 +14,7 @@ public class ShowProfile : MonoBehaviour{
 	}
 	private void OnShowProfileMessageReceived(ShowProfileMessage obj){
 		var greenScore = obj.GreenScore;
-		textFields[0].text = greenScore.ToString(CultureInfo.InvariantCulture);
+		textFields[0].text = greenScore.ToString("#.##");
 		textFields[1].text = obj.TotalProducts.ToString(CultureInfo.InvariantCulture) + " products";
 
 		for (var i = 0; i < Mathf.Ceil(greenScore); i++){
